@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+* {
+  margin: 0;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pagina-index *, .pagina-about *,.pagina-lista *, .pagina-trivia *, .pagina-nivel *, .pagina-resultado * {
+  font-family: "Bebas Neue", system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+
+/* estilos del navbar que lo usan varias paginas */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  padding-top: 5rem;
+  font-size: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Bebas Neue", system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+nav a:hover {
+  font-size: 50px;
+  color: red;
+}
+
+/*  Navbar: inicio  */
+#navbar--index {
+  background: linear-gradient(to top, rgb(150, 18, 18), rgb(69, 12, 12));
+  box-shadow: 0rem 0 100px 8rem rgb(150, 18, 18);
+  position: relative;
+  z-index: 2;
+  height: 10dvh;
+}
+
+/*  Navbar: sobre mi  */
+#navbar--about ul {
+  padding: 2rem 0;
+}
+
+/*  Navbar: pixel art  */
+#navbar--table {
+  padding-right: 2rem;
+  margin: 0;
+  width: 50%;
+  height: 100%;
+}
+
+#navbar--table ul {
+  flex-direction: column;
+  text-align: end;
+  font-size: 5rem;
+}
+
+#navbar--table a:hover {
+  font-size: 8rem;
+}
+
+/*  Navbar: trivia  */
+#navbar--trivia ul {
+  padding: 0;
+}
+
+#navbar--trivia a {
+  font-size: 3rem;
+}
+
+#navbar--trivia a:hover {
+  color: blue;
+}
+
+#navbar--playlist ul{
+  padding-top: 2rem;
+}
+
+/* pagina index */
+
+.pagina-index {
+  background-color: red;
+  height: auto;
+  max-height: 100dvh;
+}
+
+.pagina-index main {
+  display: flex;
+  max-height: 90dvh;
+}
+
+.pagina-index .derecha,
+.pagina-index .izquierda {
+  width: 50%;
+  height: 90dvh;
+}
+
+.pagina-index .izquierda {
+  background-color: rgb(209, 30, 30);
+  position: relative;
+  overflow: hidden;
+}
+
+.pagina-index .izquierda img {
+  width: 90%;
+  position: absolute;
+  z-index: 0;
+  left: 5rem;
+  top: 0rem;
+}
+
+.pagina-index .derecha {
+  background-color: rgb(209, 30, 30);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 100px 20rem rgb(209, 30, 30);
+  z-index: 1;
+}
+
+.pagina-index .derecha h1 {
+  font-size: 15dvw;
+  color: #fff;
+  text-align: end;
+  margin-right: 11rem;
+  margin-top: 4rem;
+}
+
+/* pagina sobre mi */
+
+.pagina-about * {
+  color: #fff;
+}
+
+.pagina-about {
+  background: rgb(69, 12, 12);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagina-about #about {
+  background: linear-gradient(to bottom, rgb(150, 18, 18), rgb(98, 17, 17), rgb(69, 12, 12), rgb(69, 12, 12));
+  border-radius: 10%;
+  width: 45%;
+  height: 65dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.pagina-about .titulos--about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.pagina-about .textos--about {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  font-weight: 100;
+}
+
+.pagina-about .textos--about img {
+  float: right;
+  width: 50%;
+  border-radius: 5%;
+}
+
+/* pagina playlist */
+
+.pagina-lista {
+  background-color: #440d0f;
+}
+ 
+.pagina-lista header {
+  background-color: #191716;
+  padding: 1rem;
+  text-align: center;
+}
+ 
+.pagina-lista header h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+ 
+/*  Layout: aside (izquierda) + main (derecha)  */
+.pagina-lista .contenido--lista {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+ 
+/*  Aside: lista de links  */
+.pagina-lista .aside--lista {
+  flex: 0 0 32%;
+  background-color: #191716;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+ 
+.pagina-lista .aside--lista h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #440d0f;
+  padding-bottom: .5rem;
+}
+ 
+.pagina-lista ol {
+  padding-left: 1.5rem;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+ 
+.pagina-lista a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+ 
+.pagina-lista a:hover {
+  color: #e63946;
+}
+ 
+/*  Main: espacio para el video  */
+.pagina-lista .main--lista {
+  flex: 1;
+}
+ 
+.pagina-lista .main--lista h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+ 
+/* Caja responsive 16:9 */
+.pagina-lista .video--lista {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background-color: #191716;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pagina-lista .video--lista video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* pagina pixel art */
+
+.pagina-table section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(56, 13, 13);
+}
+
+.pagina-table table {
+  width: 50%;
+  height: 100dvh;
+  border: none;
+}
+
+.negro {
+  background-color: #000;
+}
+
+.blanco {
+  background-color: #fff;
+}
+
+/* pagina trivia */
+
+.pagina-trivia,
+.pagina-nivel,
+.pagina-resultado {
+  background: linear-gradient(to bottom, #051923, #003554, #006494, #0582ca, #00a6fb);
+  height: auto;
+  min-height: 100dvh;
+}
+
+.pagina-trivia main {
+  height: auto;
+}
+
+.pagina-trivia main h1,
+.pagina-trivia main h2 {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.pagina-trivia main h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.pagina-trivia table {
+  width: 25%;
+  height: 50dvh;
+  border: none;
+  margin: 3rem auto;
+}
+
+.pagina-trivia #boton--empezar {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 4rem;
+  background-color: #0d4e71;
+  padding: .5rem 3rem;
+  border-radius: 20px;
+  width: auto;
+}
+
+
+.pagina-nivel #nivel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagina-nivel #nivel h1,
+.pagina-nivel #nivel h2,
+.pagina-nivel #nivel a {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.pagina-nivel #nivel h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.pagina-nivel #nivel a {
+  font-size: 4rem;
+}
+
+.pagina-nivel #nivel ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.pagina-nivel #nivel a {
+  text-decoration: none;
+  background-color: #0d4e71;
+  padding: 0 2rem;
+  border-radius: 20px;
+}
+
+.pagina-resultado #correcto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagina-resultado #correcto h1,
+.pagina-resultado #correcto h2,
+.pagina-resultado #correcto a {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.pagina-resultado #correcto h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.pagina-resultado #correcto a {
+  text-decoration: none;
+  background-color: #0d4e71;
+  padding: 0 2rem;
+  border-radius: 20px;
+}
